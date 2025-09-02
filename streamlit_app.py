@@ -20,7 +20,7 @@ def create_session():
 session = create_session()
 # --- Assume session is already created ---
 # Load players into pandas
-player_df = session.table("SURVIVOR_POOL.ENTRY_APP.PLAYERS").select(col("NAME"), col("PLAYER_ID")).to_pandas()
+player_df = session.table("SURVIVOR_POOL.ENTRY_APP.PLAYERS").select(col("NAME"), col("PLAYER_ID")).to_pandas().sort_values(by="NAME")
 player_options = ["-- Select a player --"] + player_df["NAME"].tolist()
 #load current week
 week = session.table("GAMES").select(avg(col("WEEK"))).collect()[0][0]
