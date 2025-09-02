@@ -32,7 +32,7 @@ earliest_game = earliest_game_df[0]["EARLIEST_GAME"]
 #title
 st.title("2025 FinServ NFL Survivor Pool")
 
-tab1, tab2, tab3 = st.tabs(["Rules", "Make a Pick", "Standings"])
+tab1, tab2, tab3 = st.tabs(["Rules", "Make a Pick", "This Week's Picks"])
 
 
 
